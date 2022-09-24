@@ -1,0 +1,12 @@
+l=[]
+key=0
+n=int(input("Enter the number of elements of list"))
+for i in range(n):
+ z=int(input("Enter elements"))
+ l.append(z)
+for i in range(n):
+   for j in range(n):
+     if(l[i]>l[j]):
+       for x in range(j,i,-1):
+         l[x],l[x-1]=l[x-1],l[x]
+print(l)
